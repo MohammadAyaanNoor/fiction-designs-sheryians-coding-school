@@ -1,0 +1,578 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+#main{
+    width: 100%;
+    height: 100%;
+    
+    position: relative;
+
+}
+#main #loader{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    top: 0;
+
+    background-color: black;
+}
+#main #loader #title{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    font-size: 40px;
+    color: rgb(213 255 64);
+    font-family: poppins;
+    font-weight: 100;
+    transform: translate(-50%,-50%);
+}
+#main #loader #hero{
+    position: relative;
+    top: 50%;
+    left: 62.5%;
+    transform: translate(-50%,-50%);
+
+    width: 210px;
+    height: 60px;
+    overflow: hidden;
+}
+#main #loader #hero h3{
+    position: absolute;
+    top: 60px;
+    font-family: poppins;
+    font-weight: 100;
+    font-size: 40px;
+    color: rgb(213 255 64);
+display: flex;
+align-items: center;
+justify-content: left;
+}
+#main #page1{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    background-color: rgb(213 255 64);
+}
+#main #page1 #nav{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 30px;
+
+}
+#main #page1 #nav h4{
+    font-size: 22px;
+    font-weight: 500;
+    font-family: prompt;
+    letter-spacing: 3px;
+}
+#main #page1 #nav #links{
+    display: flex;
+    gap: 50px;
+
+
+}
+#main #page1 #nav #links button{
+    position: relative;
+    padding: 10px 25px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 1px solid black;
+    font-size: 15px;
+    font-family: poppins;
+    font-weight: 100;
+    overflow: hidden;
+    z-index: 1;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    background-color: transparent;
+}
+#main #page1 #nav #links button .black{
+    position: absolute;
+    top: -100%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: -1;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+#main #page1 #nav #links button:hover{
+    color: rgb(213 255 64);
+    transform: scale(1.2);
+
+}
+#main #page1 #nav #links button:hover .black{
+    top: 0%;
+
+}
+#main #page1 #head h1{
+    margin-top: 7px;
+    margin-left: 30px;
+    font-family: passion one;
+    font-size: 160px;
+    line-height: 120px;
+    letter-spacing: 2px;
+    position: absolute;
+    z-index: 2;
+    font-style: italic;
+
+}
+#main #page1 #head h1::before{
+    content: "DIGITIZE IDEAS";
+    position: absolute;
+    z-index: -1;
+    left: -1%;
+    font-style: italic;
+    color: transparent;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 2px;
+}
+#main #page1 #vid{
+    position: relative;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+    height: 55%;
+    z-index: 1;
+
+    border-radius: 90px;
+
+} 
+#main #page1 #vid video{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 90px;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+#main #page1 #vid video:hover{
+    transform: scale(1.1);
+}
+#main #page1 #para{
+    position: absolute;
+    top: 19%;
+    left: 77%;
+    transform: translate(-50%,-50%);
+    height: 120px;
+    width: 500px;
+    border-radius: 60px;
+    background-color: black;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;
+
+}
+#main #page1 #para:hover{
+    transform: translate(-50%,-50%)scale(1.2);
+}
+#main #page1 #para p{
+    font-size: 20px;
+    color: rgb(213 255 64);
+    font-family: prompt;
+}
+#main #page2{
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+    background-color: rgb(35 35 35);
+}
+#effect{
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: space-evenly;
+
+    background-color: black;
+    padding: 30px;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+}
+#effect::-webkit-scrollbar{
+    display: none;
+}
+#effect h1{
+
+    color: rgb(213 255 64);
+    flex-shrink: 0;
+
+    animation-name: line;
+    animation-duration: 1;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+#effect i{
+
+    animation-name: line;
+    animation-duration: 1;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    flex-shrink: 0;
+    color: rgb(213 255 64);
+}
+#main #page2 #heading{
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 28px;
+}
+#main #page2 #heading #left{
+    width: 50%;
+    position: relative;
+
+
+}
+#main #page2 #heading #left h1{
+    font-size: 80px;
+    font-family: passion one;
+    color: rgb(196 196 196);
+}
+#main #page2 #heading #left h1 span{
+    color: rgb(213 255 64);
+}
+#main #page2 #heading #left p{
+    font-size: 15px;
+    font-family: poppins;
+    line-height: 1;
+    color: rgb(105, 104, 104);
+}
+#main #page2 #heading #right{
+
+    width: 40%;
+
+    padding:33px;
+}
+
+#main #page2 #parent{
+    display: flex;
+}
+
+#main #page2 #l1{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    padding-left: 28px;
+    width: 50%;
+
+}
+#main #page2 #l1 button{
+    position: relative;
+    width: 700px;
+    padding: 25px ;
+    font-family: prompt;
+    font-size: 35px;
+    text-align: left;
+    z-index: 2;
+    border: none;
+    border-top: 1px solid rgb(144, 144, 144);
+    color: rgb(167, 166, 166);
+    background-color: rgb(28, 28, 28);
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 3s;
+}
+#main #page2 #l1 button .w{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 0%;
+    z-index: -1;
+    background-color: rgb(213 255 64);
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+#main #page2 #l1 button:hover .w{
+    height: 100%;
+}
+#main #page2 #l1 button:hover{
+    color: black;
+}
+#main #page2 #r1 {
+    width: 50%;
+    position: relative;
+    top: 0;
+    left: 0% ;
+    
+    z-index: 999;
+
+
+
+}
+#main #page2 #r1 #vd{
+    position: absolute;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+}
+#main #page2 #r1 #vd video{
+    width: 100%;
+    height: 100%;
+}
+#main #page3{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(213 255 64) ;
+}
+#main #page3 img{
+    width: 100%;
+    position: absolute;
+    height: 40%;
+    top: 90%;
+    z-index: 999;
+}
+#page3 #text{
+    position: relative;
+    left: -100%;
+    background-color: red;
+
+}
+#page3 #text h1{
+    position: absolute;
+    font-size: 70px;
+    font-family: orbitron;
+    font-weight: 800;
+    padding-left: 23px;
+    line-height: 1;
+
+    top: 10%;
+    padding-top: 50px;
+
+}
+#main #page3 #vid2{
+    position: relative;
+
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.2);
+    width: 90%;
+    height: 50%;
+    overflow: hidden;
+    z-index: 1;
+    border-radius: 50px;
+    background-color: red;
+}
+#main #page3 #vid2 video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: 9;
+
+
+}
+#main #page4{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgb(35 35 35);
+}
+#page4 #right{
+    position: relative;
+    top: 50%;
+    left: -100%;
+    width: 65%;
+    height: 40%;
+    transform: translate(-50%,-50%);
+    border-radius: 160px;
+    background-color: rgb(213 255 64);
+    overflow: hidden;
+
+}
+
+#page4 #right #t h1{
+    font-size: 40px;
+    font-family: poppins;
+    color: black;
+    font-weight: 400;
+    margin-top: 10%;
+    margin-left: 5%;
+
+}
+#page4 #right #t p{
+    font-size: 18px;
+    font-family: poppins;
+    color: black;
+    font-weight: 100;
+    margin-left: 5%;
+    line-height: 1;
+
+}
+#page4 #right img{
+    position: absolute;
+    height: 110%;
+    width: 60%;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%,-50%);
+
+}
+#page4 #buttons{
+    position: absolute;
+    top: 50%;
+    right: -100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transform: translate(-50%,-50%);
+}
+#page4 #buttons button{
+
+    padding: 30px 140px;
+    font-size: 20px;
+    font-family: poppins;
+    white-space: nowrap;
+    font-weight: 100;
+    border-radius: 50px;
+    border: none;
+    background-color: rgb(213 255 64);
+    display: flex;
+    text-align: center;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+
+}
+#page4 #buttons button:hover{
+    cursor: pointer;
+    background-color: black;
+    color: rgb(213 255 64);
+}
+#page4 img{
+    position: absolute;
+    z-index: 999;
+    top: 80%;
+    width: 100%;
+    height: 60%;
+}
+#main #page5{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgb(213 255 64);
+}
+#main #page5 h1{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    text-align: center;
+    font-family: passion one;
+    font-weight: 700;
+    font-size: 120px;
+    font-style: italic;
+    line-height: 1;
+
+}
+#main #page5 h1::before{
+    content: "LET'S DISCUSS YOUR IDEAS";
+    position: absolute;
+    z-index: -1;
+    left: -1%;
+    font-style: italic;
+    color: transparent;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 2px;
+}
+#page5 button{
+    padding: 13px 23px;
+    font-size: 18px;
+    position: relative;
+    top: 65%;
+    left: 50%;
+    border-radius: 50px;
+    transform: translate(-50%,-50%) ;
+    background-color: transparent;
+    font-family: orbitron;
+    z-index: 2;
+    overflow: hidden;
+    border: 1px solid black;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+
+}
+#page5 button #c{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    z-index: -1;
+    
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    background-color: black;
+}
+#page5 button:hover #c{
+    height: 100%;
+}
+#page5 button:hover{
+    color: rgb(213 255 64);
+    cursor: pointer;
+    transform: translate(-50%,-50%) scale(1.2);
+}
+#page5 h2{
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    display: flex;
+    transform: translate(-50%,-50%);
+    font-family: orbitron;
+}
+#page5 h2 #ic{
+    margin-left: 15px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-around;
+}
+#page5 h3{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: Prompt;
+    font-weight: 500;
+    letter-spacing: 3px;
+    font-size: 25px;
+
+
+}
+@keyframes line {
+    0%{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+    
+}
+
+
+
+
+    
